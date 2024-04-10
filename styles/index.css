@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*---------------------NAV-SCROLL---------------------*/
+
+.scroll-down .navBar{
+    transform: translate3d(0,-100%, 0);
+}
+
+.scroll-up .navBar{
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: aqua;
+}
+
+.navBar{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.558) !important;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    z-index: 999;
+    transition: all 400ms ease-in-out;
+}
+
+li a:hover{
+    background-color: rgb(199, 6, 44);
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 0.7;
+}
+
+.menu>li{
+    position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+	text-decoration: none;
+}
+.menu li a:hover{
+	color: #0af2f6;
+	transition: all.1s;
+    text-decoration-line: underline;
+}
+
+.submenu{
+	position: absolute;
+	background: #f51606;
+	width: 120%;
+	visibility: hidden;
+	opacity: 1;
+	transition: 0.2s;
+	text-decoration: none;
+}
+
+.submenu>dl>a{
+    color:white;
+    text-decoration: none;
+}
+
+.cartelera{
+    padding: 100px 0px 100px 0px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.titleCartelera{
+    color:white;
+    font-size:50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tarjetas{
+    width:60%;
+    background-color: burlywood;
+
+}
+
+.cards>img{
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px opx 30px #000;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(150px ,1fr)
+    ) ;
+    gap:32px;
+}
