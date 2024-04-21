@@ -1,10 +1,8 @@
-// Scroll Effect
-
 const body = document.body;
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    const currentScroll = window.scrollY;
 
     if (currentScroll <= 0){
         body.classList.remove("scroll-up");
@@ -22,3 +20,14 @@ window.addEventListener('scroll', () => {
 
     lastScroll = currentScroll;
 })
+
+function incTitulo(){
+    
+    let titulo=document.getElementById("nom");
+    titulo.style.fontSize="150px";
+}
+
+function volverANormal(){
+    let titulo = document.getElementById("nom");
+    titulo.style.fontSize = "5em";
+}
