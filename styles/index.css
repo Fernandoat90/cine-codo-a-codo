@@ -1,21 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
-    margin:0 auto;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#nom{
+    text-align: center;
+    color:white;
+    font-family: "Alfa Slab One", serif;
+  font-weight: 300px;
+  font-size: 5em;
+  font-style: normal;
+}
+/*---------------------NAV-SCROLL---------------------*/
+
+.scroll-down .navBar{
+    transform: translate3d(2,-100%, 0);
+}
+
+.scroll-up .navBar{
+transform: translate3d(1,+100%, 0);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
     background-color: aqua;
 }
 
-main,header{
-    width: 80%;
-    background-color: black;
-}
-
-#nav{
-    height: 40px;
-    background-color:black;
-    display:grid;
-    justify-content:flex-start
+.navBar{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.558) !important;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    z-index: 999;
+    transition: all 400ms ease-in-out;
 }
 
 li a:hover{
@@ -36,7 +64,8 @@ li a:hover{
 	display: block;
 	padding: 15px 20px;
 	color: white;
-	font-family: 'Open sans';
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 	text-decoration: none;
 }
 .menu li a:hover{
@@ -60,25 +89,38 @@ li a:hover{
     text-decoration: none;
 }
 
-#principal{
-    background-color: rgb(102, 104, 103);
+.cartelera{
+    padding: 100px 0px 100px 0px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-#principal>h1{
+.titleCartelera{
     color:white;
-    font-size:4em;
+    font-size:50px;
+    font-weight: 400px;
+    text-transform: uppercase;
     text-align: center;
 }
 
 .tarjetas{
     width:60%;
     background-color: burlywood;
+
 }
 
 .cards>img{
     border-radius: 8px;
     width: 100%;
-    height: auto;
-    box-shadow: 0px opx 30px #000;
+    height: 300px;
+    box-shadow: 0px 0px 30px #000;
+}
+#cuadro{
+    background-color: black;
+    color:white;
 }
 
 .cards{
@@ -86,7 +128,41 @@ li a:hover{
     grid-template-columns:
     repeat(
         auto-fit,
-        minmax(150px ,1fr)
+        minmax(170px ,2fr)
     ) ;
-    gap:32px;
+    gap:15px;
 }
+
+
+
+.peli_nom{
+    text-align: center;
+}
+
+/* Inicio carrusel css*/
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 1000px ;
+    height: 300px;
+    margin: auto;
+}
+/* Para los margenes del contendor de las fotos. Podes cambiarle el ancho a gusto tambien! */
+.carousel-control {
+    width: 5%;
+}
+
+.carousel{
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+/*Fin carrusel*/
