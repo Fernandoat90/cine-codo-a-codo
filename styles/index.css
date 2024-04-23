@@ -1,31 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    font-size: 15px;
 }
 
 /*---------------------NAV-SCROLL---------------------*/
 
-.scroll-down .navBar{
-    transform: translate3d(0,-100%, 0);
+.scroll-down .navBar {
+    transform: translate3d(0, -100%, 0);
 }
 
-.scroll-up .navBar{
-
-}
+.scroll-up .navBar {}
 
 html {
     scroll-behavior: smooth;
 }
 
-body{
-    background-color: aqua;
+body {
+    background-color: rgb(0, 0, 0);
 }
 
-.navBar{
+h4 {
+    color: white;
+}
+
+figcaption span, h2, p{
+    color: white;
+}
+
+
+.container-movies {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.navBar {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.558) !important;
     height: 60px;
@@ -38,50 +54,51 @@ body{
     transition: all 400ms ease-in-out;
 }
 
-li a:hover{
+li a:hover {
     background-color: rgb(199, 6, 44);
 }
 
-.menu li:hover .submenu{
-	visibility: visible;
-	opacity: 0.7;
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 0.7;
 }
 
-.menu>li{
+.menu>li {
     position: relative;
-	display: inline-block;
+    display: inline-block;
 }
 
-.menu > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-	text-decoration: none;
-}
-.menu li a:hover{
-	color: #0af2f6;
-	transition: all.1s;
-    text-decoration-line: underline;
-}
-
-.submenu{
-	position: absolute;
-	background: #f51606;
-	width: 120%;
-	visibility: hidden;
-	opacity: 1;
-	transition: 0.2s;
-	text-decoration: none;
-}
-
-.submenu>dl>a{
-    color:white;
     text-decoration: none;
 }
 
-.cartelera{
+.menu li a:hover {
+    color: #0af2f6;
+    transition: all.1s;
+    text-decoration-line: underline;
+}
+
+.submenu {
+    position: absolute;
+    background: #f51606;
+    width: 120%;
+    visibility: hidden;
+    opacity: 1;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.submenu>dl>a {
+    color: white;
+    text-decoration: none;
+}
+
+.cartelera {
     padding: 100px 0px 100px 0px;
     background-color: rgb(0, 0, 0);
     width: 100%;
@@ -90,33 +107,152 @@ li a:hover{
     flex-direction: column;
     align-items: center;
 }
-.titleCartelera{
-    color:white;
-    font-size:50px;
+
+.titleCartelera {
+    color: white;
+    font-size: 50px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
 }
 
-.tarjetas{
-    width:60%;
+.tarjetas {
+    width: 60%;
     background-color: burlywood;
 
 }
 
-.cards>img{
+.cards>img {
     border-radius: 8px;
     width: 100%;
     height: auto;
     box-shadow: 0px opx 30px #000;
 }
 
-.cards{
-    display:grid;
+.cards {
+    display: grid;
     grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(150px ,1fr)
-    ) ;
-    gap:32px;
+        repeat(auto-fit,
+            minmax(150px, 1fr));
+    gap: 32px;
 }
+
+.movieBox {
+    padding: 5px;
+    border: dashed 3px #0026ff;
+    margin-top: 5px;
+}
+
+.theatersInfo {
+    margin-top: 5px;
+    background-color: #f0eaea;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    border: double 3px #b200ff;
+}
+
+/* Showtimes section */
+.showtimes {
+    flex: 1 0 50%;
+    padding-left: 10%;
+    color: white;
+}
+
+.showtimes h3 {
+    margin-bottom: 10px;
+}
+
+.theater {
+    margin-bottom: 15px;
+}
+
+.theater h4 {
+    margin-bottom: 5px;
+}
+
+.showtimes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.showtimes-list li {
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Movie info section */
+.movie-info {
+    flex: 1 0 50%;
+    margin-bottom: 20px;
+}
+
+.poster {
+    width: 100%;
+    object-fit: cover;
+}
+
+.details {
+    padding: 10px;
+}
+
+.details h2 {
+    margin-bottom: 10px;
+}
+
+.genres {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.genres span {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #000000;
+    border: 1px solid white;
+
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: gold;
+}
+
+.average {
+    margin-left: 10px;
+}
+/* Media Querys */
+/* Large desktop */
+@media (min-width: 1200px) { 
+    .showtimes {
+        padding-left: 10%;
+    }
+ }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+    .showtimes {
+        padding-left: 5%;
+    }
+ }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .showtimes {
+        padding-left: 5%;
+    }
+ }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .showtimes {
+        padding-left: 5%;
+    }
+ }
