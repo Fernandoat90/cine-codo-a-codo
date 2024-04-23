@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -6,20 +6,20 @@
     font-size: 15px;
 }
 
-#nom{
+#nom {
     text-align: center;
-    color:white;
+    color: white;
     font-family: "Alfa Slab One", serif;
-  font-weight: 300px;
-  font-size: 5em;
-  font-style: normal;
+    font-weight: 300px;
+    font-size: 5em;
+    font-style: normal;
 }
 
 body {
     background-color: rgb(0, 0, 0);
 }
 
-.navBar{
+.navBar {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.558) !important;
     height: 60px;
@@ -30,11 +30,15 @@ body {
     position: fixed;
     z-index: 999;
     transition: all 400ms ease-in-out;
+}
+
 h4 {
     color: white;
 }
 
-figcaption span, h2, p{
+figcaption span,
+h2,
+p {
     color: white;
 }
 
@@ -61,13 +65,13 @@ li a:hover {
     display: inline-block;
 }
 
-.menu > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .menu li a:hover {
@@ -91,7 +95,7 @@ li a:hover {
     text-decoration: none;
 }
 
-.cartelera{
+.cartelera {
     padding: 100px 0px 100px 0px;
     background-color: rgb(0, 0, 0);
     width: 100%;
@@ -100,9 +104,10 @@ li a:hover {
     flex-direction: column;
     align-items: center;
 }
-.titleCartelera{
-    color:white;
-    font-size:50px;
+
+.titleCartelera {
+    color: white;
+    font-size: 50px;
     font-weight: 400px;
     text-transform: uppercase;
     text-align: center;
@@ -111,6 +116,7 @@ li a:hover {
 .tarjetas {
     width: 60%;
     background-color: burlywood;
+
 }
 
 .cards>img {
@@ -119,58 +125,54 @@ li a:hover {
     height: 300px;
     box-shadow: 0px 0px 30px #000;
 }
-#cuadro{
+
+#cuadro {
     background-color: black;
-    color:white;
+    color: white;
 }
 
 .cards {
     display: grid;
     grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(170px ,2fr)
-    ) ;
-    gap:15px;
+        repeat(auto-fit,
+            minmax(170px, 2fr));
+    gap: 15px;
 }
 
 
 
-.peli_nom{
+.peli_nom {
     text-align: center;
 }
 
 /* Inicio carrusel css*/
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    width: 1000px ;
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 1000px;
     height: 300px;
     margin: auto;
 }
+
 /* Para los margenes del contendor de las fotos. Podes cambiarle el ancho a gusto tambien! */
 .carousel-control {
     width: 5%;
 }
 
-.carousel{
-  margin: 0;
-  padding: 0;
-  width: 90%;
-  
+.carousel {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+
 }
 
-.container{
+.container {
     width: 80%;
     display: flex;
     justify-content: center;
 }
 
 /*Fin carrusel*/
-        repeat(auto-fit,
-            minmax(150px, 1fr));
-    gap: 32px;
-}
 
 .movieBox {
     padding: 5px;
@@ -203,6 +205,14 @@ li a:hover {
 }
 
 .theater h4 {
+    margin-bottom: 5px;
+}
+
+.trailer {
+    margin-top: 10%;
+}
+
+.trailer h4 {
     margin-bottom: 5px;
 }
 
@@ -263,31 +273,32 @@ li a:hover {
 .average {
     margin-left: 10px;
 }
+
 /* Media Querys */
 /* Large desktop */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .showtimes {
         padding-left: 10%;
     }
- }
- 
+}
+
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
     .showtimes {
         padding-left: 5%;
     }
- }
- 
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     .showtimes {
         padding-left: 5%;
     }
- }
- 
+}
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .showtimes {
         padding-left: 5%;
     }
- }
+}
