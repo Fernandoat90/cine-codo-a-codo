@@ -20,14 +20,3 @@ window.addEventListener('scroll', () => {
 
     lastScroll = currentScroll;
 })
-
-function incTitulo(){
-    
-    let titulo=document.getElementById("nom");
-    titulo.style.fontSize="150px";
-}
-
-function volverANormal(){
-    let titulo = document.getElementById("nom");
-    titulo.style.fontSize = "5em";
-}
