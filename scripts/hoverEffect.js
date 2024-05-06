@@ -33,9 +33,19 @@ function quitarClaseError() {
     }
 }
 
+function limpiarCampos() {
+    nombre.value="";
+    apellido.value="";
+    mail.value="";
+    celular.value="";
+    textareaForm.value="";
+    
+}
+
 // Función para el botón Borrar para que borre el valor
 function reset() {
     quitarClaseError();
+    limpiarCampos();
     
 }
 
@@ -45,7 +55,7 @@ function reset() {
 function ValidaCampos() {
 
     // Ejecuto función para que quite todos los estilos de error en los campos que los tuvieran
-    reset();
+    quitarClaseError()
   
     // Verifico si lleno los siguientes campos, sino que aplique un estilo de error, haga foco en el campo y se detenga
     if (nombre.value === "") {
