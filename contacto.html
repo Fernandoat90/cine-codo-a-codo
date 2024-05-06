@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee+Spice&family=Seymour+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navBar">
+
+            <ul class="menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./commonNotFound.html">Salas</a>
+                    <ul class="submenu">
+                        <dl><a href="./commonNotFound.html">Sala 1</a></dl>
+                        <dl><a href="./commonNotFound.html">Sala 2</a></dl>
+                        <dl><a href="./commonNotFound.html">Sala 3</a></dl>
+                        <dl><a href="./commonNotFound.html">Sala 4</a></dl>
+                    </ul>
+                </li>
+                <li><a href="./commonNotFound.html">Entradas</a>
+                    <ul class="submenu">
+                        <dl><a href="./commonNotFound.html">2D</a></dl>
+                        <dl><a href="./commonNotFound.html">3D</a></dl>
+                        <dl><a href="./commonNotFound.html">4D</a></dl>
+                    </ul>
+                </li>
+                <li><a href="./contacto.html">Contáctanos</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="mainContacto">
+
+        <section class="contacto">
+
+            <h2 class="tituloContacto">Datos de Contacto</h2>
+
+            <form class="formulario">
+                <div class="itemsFormulario">
+                  
+                    <div >
+                          <input type="text" class="inputContacto" id="nombre" placeholder="Nombre" value="" required>
+                    </div>
+                    <div>
+                          <input type="text" class="inputContacto" id="apellido" placeholder="Apellido" value="" required>
+                    </div>
+                    <div >
+                          <input type="email" class="inputContacto" id="correo" placeholder="Correo" aria-describedby="emailHelp" value="" required >
+                    </div>
+                    <div >
+                            <input type="text" class="inputContacto" id="ceular" placeholder="Celular" value="" required >
+                    </div>
+                    <div >
+                        <!--  <label class="labelForm" for="categoria" >Provincia</label> --> 
+                        <select class="inputContacto" aria-label="--Categoría--" id="categoria">
+                          
+                          <option value="1" selected>Buenos Aires</option>
+                          <option value="2">CABA</option>
+                          <option value="3">Catamarca</option>
+                          <option value="4">Chaco</option>
+                          <option value="5">Chubut</option>
+                          <option value="6">Córdoba</option>
+                          <option value="7">Corrientes</option>
+                          <option value="8">Entre Ríos</option>
+                          <option value="9">Formosa</option>
+                          <option value="10">Jujuy</option>
+                          <option value="11">La Pampa</option>
+                          <option value="12">La Rioja</option>
+                          <option value="13">Mendoza</option>
+                          <option value="14">Misiones</option>
+                          <option value="15">Neuquén</option>
+                          <option value="16">Río Negro</option>
+                          <option value="17">Salta</option>
+                          <option value="18">San Juan</option>
+                          <option value="19">San Luis</option>
+                          <option value="20">Santa Cruz</option>
+                          <option value="21">Santa Fe</option>
+                          <option value="22">Santiago del Estero</option>
+                          <option value="23">Tierra del Fuego</option>
+                          <option value="24">Tucumán</option>
+                          <option value="25">Otro Lugar</option>
+
+                        </select>
+                    
+                    </div>
+
+                    <div class="">
+                          <button class="botonForm" type="button" id="btnBorrar">Borrar</button>
+                    </div>
+                    <div class="">
+                          <button class="botonform" type="button" id="btnResumen">Resumen</button>
+                    </div>
+                </div>
+              
+              </form> 
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <h2>footer</h2>
+
+    </footer>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/hoverEffect.js"></script>
+</body>
+
+</html>
