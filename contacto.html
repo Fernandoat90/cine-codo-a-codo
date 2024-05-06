@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Contáctanos</title>
-
+    <link rel=" icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -53,13 +54,13 @@
 
         <section class="contacto">
 
-            <h2 class="tituloContacto">Datos de Contacto</h2>
-
-            <form class="formulario">
+            <p class="tituloContacto">Datos de Contacto</p>
+            
+            <form class="formulario" action="">
                 <div class="itemsFormulario">
                   
                     <div >
-                          <input type="text" class="inputContacto" id="nombre" placeholder="Nombre" value="" required>
+                          <input type="text" class="inputContacto" id="nombre" aria-label="Nombre" placeholder="Nombre" value="" required>
                     </div>
                     <div>
                           <input type="text" class="inputContacto" id="apellido" placeholder="Apellido" value="" required>
@@ -68,13 +69,13 @@
                           <input type="email" class="inputContacto" id="correo" placeholder="Correo" aria-describedby="emailHelp" value="" required >
                     </div>
                     <div >
-                            <input type="text" class="inputContacto" id="ceular" placeholder="Celular" value="" required >
+                            <input type="text" class="inputContacto" id="celular" placeholder="Celular sin código de área ni el 15. Ej: 11626364" value="" required >
                     </div>
-                    <div >
-                        <!--  <label class="labelForm" for="categoria" >Provincia</label> --> 
-                        <select class="inputContacto" aria-label="--Categoría--" id="categoria">
+                    <div class="itemsSelect">
+                        <label class="labelForm" for="categoria" >Provincia</label>  
+                        <select class="inputContacto" aria-label="--Categoría--" id="categoria" placeholder="Provincia">
                           
-                          <option value="1" selected>Buenos Aires</option>
+                          <option value="1" selected >Buenos Aires</option>
                           <option value="2">CABA</option>
                           <option value="3">Catamarca</option>
                           <option value="4">Chaco</option>
@@ -103,13 +104,27 @@
                         </select>
                     
                     </div>
+                    <div class="itemsSelect">
+                        <label class="labelForm" for="categoria" >¿cómo deseas que te contactemos?</label>  
+                        <div>
+                            <label>Celular</label>
+                            <input type="radio" id="contacto" name="contacto" value="celular" checked>
+                            <label>E-mail</label>
+                            <input type="radio" id="contacto" name="contacto" value="correo">
+                            
+                        </div>                    
+                    </div>
+                    <div class="itemsSelect">
+                        <label class="labelForm" for="categoria" >Consultas</label>  
+                        
+                            <textarea class="inputTextArea " name="textareaForm" id="textareaForm" rows="5" cols="50" required></textarea>
+                     </div>
 
-                    <div class="">
-                          <button class="botonForm" type="button" id="btnBorrar">Borrar</button>
+                    <div class="botonesForm">
+                          <button class="botonForm botVerde" type="submit" id="btnBorrar">Borrar</button>
+                          <button class="botonForm botAzul" type="submit" id="btnEnviar">Enviar</button>
                     </div>
-                    <div class="">
-                          <button class="botonform" type="button" id="btnResumen">Resumen</button>
-                    </div>
+                    
                 </div>
               
               </form> 
@@ -118,8 +133,13 @@
     </main>
 
     <footer class="footer">
-        <h2>footer</h2>
-
+        <div class="imgFooter">
+            <p>@JoytsCines</p>
+            <img src="./img/facebook.png" alt="facebook">
+            <img src="./img/instagram.png" alt="instagram">
+            <img src="./img/x.png" alt="x">
+            <img src="./img/youtube.png" alt="Youtube">
+        </div>
     </footer>
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/hoverEffect.js"></script>
