@@ -21,11 +21,11 @@ let textareaForm       = document.getElementById("textareaForm");
 
 // Función para quitar el estilo de error a los elementos del form
 function quitarClaseError() {
-    nombre.value="";
+    /*nombre.value="";
     apellido.value="";
     mail.value="";
     celular.value="";
-    textareaForm.value="";
+    textareaForm.value="";*/
     let x = document.querySelectorAll(".inputContacto, .inputTextArea");
     let i;
     for (i = 0; i < x.length; i++) {
